@@ -3,6 +3,7 @@ package com.fooder.nsh.fooder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -13,7 +14,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    public int ORDER = 1 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +79,22 @@ public class MainActivity extends AppCompatActivity {
         });
  */
 
+        EditText id = (EditText) findViewById(R.id.number);
+        String phone = id.getText().toString();
+
+        EditText Q1 = (EditText) findViewById(R.id.q1);
+        String q1 =  Q1.getText().toString();
+
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
-        order
+        order Order = new order();
+
+        Order.setn1("name1");
+        Order.setq1(q1);
+
+
+        rootRef.child("Banglore").setValue(bangalore);
+
+
 
 
 

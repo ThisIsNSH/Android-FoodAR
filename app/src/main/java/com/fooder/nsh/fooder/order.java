@@ -7,7 +7,7 @@ package com.fooder.nsh.fooder;
 public class order {
 
     private String n1,n2,n3;
-    private int q1,q2,q3;
+    private String q1,q2,q3;
 
 
     public order() {
@@ -15,42 +15,42 @@ public class order {
     public void setn1(String n1) {
         this.n1 = n1;
     }
-    public void setq1 (int q1) {
+    public void setq1 (String q1) {
         this.q1 = q1;
     }
 
     public void setn2(String n2) {
         this.n2 = n2;
     }
-    public void setq2 (int q2) {
+    public void setq2 (String q2) {
         this.q2 = q2;
     }
 
     public void setn3(String n3) {
         this.n3 = n3;
     }
-    public void setq3 (int q3) {
+    public void setq3 (String q3) {
         this.q3 = q3;
     }
 
     public String getn1() {
         return n1;
     }
-    public int getq1() {
+    public String getq1() {
         return q1;
     }
 
     public String getn2() {
         return n2;
     }
-    public int getq2() {
+    public String getq2() {
         return q2;
     }
 
     public String getn3() {
         return n3;
     }
-    public int getq3() {
+    public String getq3() {
         return q3;
     }
 
