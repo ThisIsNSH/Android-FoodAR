@@ -85,12 +85,23 @@ public class MainActivity extends AppCompatActivity {
         EditText Q1 = (EditText) findViewById(R.id.q1);
         String q1 =  Q1.getText().toString();
 
+        EditText Q2 = (EditText) findViewById(R.id.q2);
+        String q2 =  Q2.getText().toString();
+
+        EditText Q3 = (EditText) findViewById(R.id.q3);
+        String q3 =  Q3.getText().toString();
+
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         order Order = new order();
 
         Order.setn1("name1");
         Order.setq1(q1);
 
+        Order.setn2("name2");
+        Order.setq2(q2);
+
+        Order.setn3("name3");
+        Order.setq3(q3);
 
         rootRef.child("Banglore").setValue(bangalore);
 
