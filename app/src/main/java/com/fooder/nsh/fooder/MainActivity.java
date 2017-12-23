@@ -81,29 +81,29 @@ public class MainActivity extends AppCompatActivity {
         });
  */
 
-        EditText id = (EditText) findViewById(R.id.number);
+        final EditText id = (EditText) findViewById(R.id.number);
         final String phone = id.getText().toString();
 
-        EditText Q1 = (EditText) findViewById(R.id.q1);
+        final EditText Q1 = (EditText) findViewById(R.id.q1);
         final String q1 =  Q1.getText().toString();
 
-        EditText Q2 = (EditText) findViewById(R.id.q2);
+        final EditText Q2 = (EditText) findViewById(R.id.q2);
         final String q2 =  Q2.getText().toString();
 
-        EditText Q3 = (EditText) findViewById(R.id.q3);
+        final EditText Q3 = (EditText) findViewById(R.id.q3);
         final String q3 =  Q3.getText().toString();
 
         final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         final order Order = new order();
 
-        Order.setn1("name1");
-        Order.setq1(q1);
+        Order.setn1(Q1.getText().toString());
+       // Order.setq1();
 
-        Order.setn2("name2");
-        Order.setq2(q2);
+        Order.setn2(Q2.getText().toString());
+       // Order.setq2(Q2.getText().toString());
 
-        Order.setn3("name3");
-        Order.setq3(q3);
+        Order.setn3(Q3.getText().toString());
+       // Order.setq3(Q3.getText().toString());
 
         Button click = (Button) findViewById(R.id.order);
         click.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                rootRef.child(phone).setValue(Order);
+                rootRef.child(id.getText().toString()).setValue(Order);
             }
         });
 
