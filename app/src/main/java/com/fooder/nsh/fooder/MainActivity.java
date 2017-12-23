@@ -13,6 +13,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    public int ORDER = 1 ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
  */
 
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+        order
 
 
 
