@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="quantity"
-        android:inputType="number"
+
         android:id="@+id/q1"/>
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +33,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
         android:hint="quantity"
         android:id="@+id/q2"/>
     <TextView
@@ -45,13 +44,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="quantity"
-        android:inputType="number"
         android:id="@+id/q3"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="order"
         android:id="@+id/order"/>
-
 
 </LinearLayout>

@@ -96,13 +96,13 @@ public class MainActivity extends AppCompatActivity {
         final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         final order Order = new order();
 
-        Order.setn1(Q1.getText().toString());
+        Order.setn1(id.getText().toString().trim());
        // Order.setq1();
 
-        Order.setn2(Q2.getText().toString());
+        Order.setn2(Q2.getText().toString().trim());
        // Order.setq2(Q2.getText().toString());
 
-        Order.setn3(Q3.getText().toString());
+        Order.setn3(Q3.getText().toString().trim());
        // Order.setq3(Q3.getText().toString());
 
         Button click = (Button) findViewById(R.id.order);
