@@ -3,6 +3,8 @@ package com.fooder.nsh.fooder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -80,19 +82,19 @@ public class MainActivity extends AppCompatActivity {
  */
 
         EditText id = (EditText) findViewById(R.id.number);
-        String phone = id.getText().toString();
+        final String phone = id.getText().toString();
 
         EditText Q1 = (EditText) findViewById(R.id.q1);
-        String q1 =  Q1.getText().toString();
+        final String q1 =  Q1.getText().toString();
 
         EditText Q2 = (EditText) findViewById(R.id.q2);
-        String q2 =  Q2.getText().toString();
+        final String q2 =  Q2.getText().toString();
 
         EditText Q3 = (EditText) findViewById(R.id.q3);
-        String q3 =  Q3.getText().toString();
+        final String q3 =  Q3.getText().toString();
 
-        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
-        order Order = new order();
+        final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+        final order Order = new order();
 
         Order.setn1("name1");
         Order.setq1(q1);
@@ -103,7 +105,18 @@ public class MainActivity extends AppCompatActivity {
         Order.setn3("name3");
         Order.setq3(q3);
 
-        rootRef.child("Banglore").setValue(bangalore);
+        Button click = (Button) findViewById(R.id.order);
+        click.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                rootRef.child(phone).setValue(Order);
+            }
+        });
+
+
+
 
 
 
