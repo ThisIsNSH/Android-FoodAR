@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+      /*  DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         Weather bangalore = new Weather();
         bangalore.setCity("Banglore");
         bangalore.setTemperature(24);
@@ -45,10 +45,19 @@ public class MainActivity extends AppCompatActivity {
      *  climate.getCity()
      *  climate.getTemperature()
      *  climate.getHumidity()
-     *  climate.getPressure()
+     *  c<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name 1"
+        android:id="@+id/n1"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="quantity"
+        android:id="@+id/q1"/>limate.getPressure()
      **/
 
-                    TextView a = findViewById(R.id.one);
+/*                    TextView a = findViewById(R.id.one);
                     TextView b = findViewById(R.id.two);
                     TextView c = findViewById(R.id.three);
                     TextView d = findViewById(R.id.next);
@@ -64,8 +73,14 @@ public class MainActivity extends AppCompatActivity {
        /*
         * You may print the error message.
                **/
-            }
+   /*         }
         });
+ */
+
+        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+
+
+
     }
 
 }
