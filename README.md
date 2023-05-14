@@ -9,6 +9,5 @@ The order will be uploaded in our firebase database and will be extracted by our
 
 The UI has to be extra-ordinary and appealing and Admin App may not be good in UI.
 
-If you are contributing and have some doubt Email at hadanis.singh@gmail.com
 
 
